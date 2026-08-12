@@ -89,7 +89,7 @@ Cyber Security Student • Ethical Hacker • IoT Builder • AI Explorer 🚀
 # 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=iamjaved026&show_icons=true&theme=tokyonight&hide_border=true" height="180"/>
+  <img src="https://github-stats-extended.vercel.app/api?username=iamjaved026&rank_icon=github&show_icons=true&include_all_commits=true&theme=github_dark"/>
 
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamjaved026&theme=tokyonight&hide_border=true" height="180"/>
 </p>
@@ -99,7 +99,7 @@ Cyber Security Student • Ethical Hacker • IoT Builder • AI Explorer 🚀
 # 🏆 GitHub Achievements
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=iamjaved026&theme=tokyonight&no-frame=true&margin-w=15&margin-h=15"/>
+  <img src="https://github-profile-trophy-unserori.vercel.app/?username=iamjaved026&theme=algolia"/>
 </p>
 
 ---
