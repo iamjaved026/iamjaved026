@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 300" width="100%" height="300">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="cyber-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39d353" />
+      <stop offset="45%" stop-color="#00f7ff" />
+      <stop offset="100%" stop-color="#58a6ff" />
+    </linearGradient>
+
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#12171f" />
+      <stop offset="100%" stop-color="#090d14" />
+    </linearGradient>
+
+    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39d353" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00f7ff" stop-opacity="0.08" />
+    </linearGradient>
+
+    <linearGradient id="scanline-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f7ff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#39d353" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#00f7ff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Scanline & Pulse Animations -->
+    <style>
+      @keyframes neon-glow {
+        0%, 100% { filter: drop-shadow(0 0 10px rgba(57, 211, 83, 0.7)) drop-shadow(0 0 25px rgba(0, 247, 255, 0.4)); }
+        50%      { filter: drop-shadow(0 0 18px rgba(57, 211, 83, 0.95)) drop-shadow(0 0 45px rgba(0, 247, 255, 0.65)); }
+      }
+      @keyframes pulse-ring {
+        0%   { r: 28; opacity: 0.8; stroke-width: 1.5; }
+        100% { r: 52; opacity: 0;   stroke-width: 0.5; }
+      }
+      @keyframes radar-spin {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+      }
+      @keyframes scan-sweep {
+        0%   { transform: translateY(-40px); opacity: 0; }
+        15%  { opacity: 1; }
+        85%  { opacity: 1; }
+        100% { transform: translateY(320px); opacity: 0; }
+      }
+      @keyframes cursor-blink {
+        0%, 100% { opacity: 1; }
+        50%      { opacity: 0.2; }
+      }
+      @keyframes float-crest {
+        0%, 100% { transform: translateY(0px); }
+        50%      { transform: translateY(-4px); }
+      }
+      .glow-title   { animation: neon-glow 3.5s ease-in-out infinite alternate; }
+      .cursor-blink { animation: cursor-blink 0.9s infinite; }
+      .floating     { animation: float-crest 3.2s ease-in-out infinite alternate; }
+      .radar-sweep  { animation: radar-spin 8s linear infinite; transform-origin: 460px 105px; }
+      .scanline     { animation: scan-sweep 5s ease-in-out infinite; }
+      .term-code    { font-family: ui-monospace, "JetBrains Mono", Consolas, monospace; font-size: 10px; }
+    </style>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect x="1" y="1" width="918" height="298" rx="14" fill="url(#bg-grad)" stroke="#30363d" stroke-width="1.4" />
+
+  <!-- Background Cyber Grid Mesh -->
+  <g stroke="#1c2331" stroke-width="0.8" opacity="0.65">
+    <line x1="160" y1="40" x2="160" y2="299" stroke-dasharray="4 6" />
+    <line x1="300" y1="40" x2="300" y2="299" stroke-dasharray="4 6" />
+    <line x1="620" y1="40" x2="620" y2="299" stroke-dasharray="4 6" />
+    <line x1="760" y1="40" x2="760" y2="299" stroke-dasharray="4 6" />
+    <line x1="1" y1="110" x2="919" y2="110" stroke-dasharray="4 6" />
+    <line x1="1" y1="210" x2="919" y2="210" stroke-dasharray="4 6" />
+  </g>
+
+  <!-- Sweeping Scanline Effect -->
+  <rect x="2" y="40" width="916" height="35" fill="url(#scanline-grad)" class="scanline" pointer-events="none" />
+
+  <!-- Terminal Window Titlebar -->
+  <rect x="1" y="1" width="918" height="38" rx="14" fill="#161b22" />
+  <rect x="1" y="24" width="918" height="15" fill="#161b22" />
+  <line x1="1" y1="39" x2="919" y2="39" stroke="#30363d" stroke-width="1" />
+
+  <!-- Window Buttons -->
+  <circle cx="24" cy="20" r="5" fill="#ff5f56" />
+  <circle cx="42" cy="20" r="5" fill="#ffbd2e" />
+  <circle cx="60" cy="20" r="5" fill="#27c93f" />
+
+  <!-- Terminal Title & Uplink Tag -->
+  <text x="460" y="24" fill="#8b949e" font-size="11.5" font-family="ui-monospace, monospace" text-anchor="middle" font-weight="600">
+    javed@sec-ops:~# ./profile_daemon --listen 0.0.0.0:1337 --privilege root
+  </text>
+  <g transform="translate(850, 20)">
+    <circle cx="-5" cy="0" r="3.5" fill="#39d353" class="cursor-blink" />
+    <text x="5" y="3.5" fill="#39d353" font-family="ui-monospace, monospace" font-size="10" font-weight="700">ONLINE</text>
+  </g>
+
+  <!-- Left Side: Interactive CLI Feed -->
+  <g transform="translate(30, 80)" class="term-code">
+    <text x="0" y="0" fill="#8b949e">&gt; <tspan fill="#39d353">whoami</tspan></text>
+    <text x="0" y="18" fill="#58a6ff">iamjaved026</text>
+    <text x="0" y="40" fill="#8b949e">&gt; <tspan fill="#39d353">cat</tspan> /etc/capabilities</text>
+    <text x="0" y="58" fill="#7ee787">✔ Offensive Security &amp; Pentesting</text>
+    <text x="0" y="74" fill="#7ee787">✔ Real-Time CLI &amp; Terminal Protocols</text>
+    <text x="0" y="90" fill="#7ee787">✔ IoT Hardware &amp; UART Probing</text>
+    <text x="0" y="106" fill="#7ee787">✔ Biometric Computer Vision (AI)</text>
+    <text x="0" y="128" fill="#8b949e">&gt; <tspan fill="#39d353">uptime</tspan> --live</text>
+    <text x="0" y="146" fill="#bc8cff">up 355 days, 68 repos active</text>
+  </g>
+
+  <!-- Right Side: Live Telemetry Tele-Matrix -->
+  <g transform="translate(730, 80)" class="term-code">
+    <text x="0" y="0" fill="#8b949e">&gt; <tspan fill="#00f7ff">telemetry.stat</tspan></text>
+    <text x="0" y="18" fill="#39d353">TOTAL REPOS: <tspan fill="#ffffff" font-weight="700">68</tspan></text>
+    <text x="0" y="36" fill="#58a6ff">PUBLIC CODES: <tspan fill="#ffffff" font-weight="700">17</tspan></text>
+    <text x="0" y="54" fill="#bc8cff">PRIVATE VAULT: <tspan fill="#ffffff" font-weight="700">51</tspan></text>
+    <text x="0" y="72" fill="#e3b341">STARS DETECTED: <tspan fill="#ffffff" font-weight="700">15+</tspan></text>
+    <text x="0" y="90" fill="#ff7b72">ANNUAL COMMITS: <tspan fill="#ffffff" font-weight="700">355</tspan></text>
+    <text x="0" y="112" fill="#8b949e">&gt; <tspan fill="#00f7ff">target.status</tspan></text>
+    <text x="0" y="130" fill="#7ee787">[● KERNEL HARDENED]</text>
+    <text x="0" y="148" fill="#39d353">SYS_LATENCY: <tspan fill="#ffffff">0.8ms</tspan></text>
+  </g>
+
+  <!-- Central Visual: Cyber Shield Crest + Rotating Radar -->
+  <g class="floating">
+    <!-- Pulsing Radar Waves -->
+    <circle cx="460" cy="105" r="32" fill="none" stroke="#00f7ff" stroke-dasharray="4 4" class="radar-sweep" opacity="0.6" />
+    <circle cx="460" cy="105" r="46" fill="none" stroke="#39d353" stroke-width="0.8" opacity="0.35" />
+
+    <!-- Cyber Shield Outer Frame -->
+    <path d="M460 62 L498 76 V105 C498 135 460 154 460 154 C460 154 422 135 422 105 V76 Z" 
+          fill="url(#shield-grad)" stroke="url(#cyber-grad)" stroke-width="2.2" />
+    
+    <!-- Central Prompt Symbol >_ -->
+    <path d="M446 95 L456 105 L446 115" fill="none" stroke="#39d353" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="464" y1="115" x2="476" y2="115" stroke="#00f7ff" stroke-width="3.2" stroke-linecap="round" class="cursor-blink"/>
+  </g>
+
+  <!-- Main Persona Typography -->
+  <text x="460" y="196" text-anchor="middle" class="glow-title"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+        font-size="34" font-weight="900" letter-spacing="0.1em" fill="url(#cyber-grad)">
+    JAVED HUSSAIN
+  </text>
+
+  <!-- Tagline Subtitle -->
+  <text x="460" y="224" text-anchor="middle"
+        font-family="ui-monospace, 'JetBrains Mono', Consolas, monospace" 
+        font-size="12" font-weight="600" letter-spacing="0.16em" fill="#c9d1d9">
+    OFFENSIVE RESEARCH  •  FULL-STACK SYSTEMS  •  HARDWARE &amp; AI
+  </text>
+
+  <!-- Status HUD Indicators -->
+  <g transform="translate(460, 258)" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10.5">
+    <rect x="-260" y="-12" width="160" height="22" rx="11" fill="#161b22" stroke="#238636" stroke-width="1.2"/>
+    <circle cx="-248" cy="-1" r="3.5" fill="#39d353"/>
+    <text x="-172" y="2.5" fill="#7ee787" font-weight="700">KERNEL: HARDENED</text>
+
+    <rect x="-85" y="-12" width="170" height="22" rx="11" fill="#161b22" stroke="#1f6feb" stroke-width="1.2"/>
+    <circle cx="-73" cy="-1" r="3.5" fill="#58a6ff"/>
+    <text x="8" y="2.5" fill="#58a6ff" font-weight="700">68 REPOSITORIES VAULT</text>
+
+    <rect x="100" y="-12" width="160" height="22" rx="11" fill="#161b22" stroke="#8957e5" stroke-width="1.2"/>
+    <circle cx="112" cy="-1" r="3.5" fill="#bc8cff"/>
+    <text x="187" y="2.5" fill="#bc8cff" font-weight="700">355 TELEMETRY LOGS</text>
+  </g>
+</svg>

@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 145" width="100%" height="145">
+  <defs>
+    <linearGradient id="cyber-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d0d7de" stop-opacity="0.2" />
+      <stop offset="30%" stop-color="#1a7f37" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#0969da" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#d0d7de" stop-opacity="0.2" />
+    </linearGradient>
+
+    <style>
+      .term-prompt { font-family: ui-monospace, "JetBrains Mono", Menlo, monospace; font-size: 11px; fill: #57606a; }
+      .term-cmd    { fill: #218bff; font-weight: 600; }
+      .term-green  { fill: #1a7f37; font-weight: 700; }
+      .term-cyan   { fill: #0969da; }
+      .fixed-text  { font-family: ui-monospace, "JetBrains Mono", monospace; font-size: 32px; font-weight: 700; fill: #1f2328; }
+      .cipher-text { font-family: ui-monospace, "JetBrains Mono", Consolas, monospace; font-size: 32px; font-weight: 800; }
+      
+      @keyframes blink-cursor {
+        0%, 100% { opacity: 1; }
+        50%      { opacity: 0; }
+      }
+      .cursor { animation: blink-cursor 0.9s infinite; fill: #1a7f37; }
+      
+
+      @keyframes decrypt_c0 {
+        0%, 1.1% { opacity: 0.5; fill: #0969da; }
+        1.2%, 2.4% { opacity: 0.7; fill: #218bff; }
+        2.5%, 3.4% { opacity: 0.85; fill: #1a7f37; }
+        4.2%, 94.2% { opacity: 1; fill: #1a7f37; filter: none; }
+        94.3%, 100%   { opacity: 0.4; fill: #0969da; }
+      }
+
+      @keyframes decrypt_c1 {
+        0%, 1.7% { opacity: 0.5; fill: #0969da; }
+        1.8%, 3.5% { opacity: 0.7; fill: #218bff; }
+        3.6%, 5.0% { opacity: 0.85; fill: #1a7f37; }
+        6.0%, 94.2% { opacity: 1; fill: #1a7f37; filter: none; }
+        94.3%, 100%   { opacity: 0.4; fill: #0969da; }
+      }
+
+      @keyframes decrypt_c2 {
+        0%, 2.2% { opacity: 0.5; fill: #0969da; }
+        2.3%, 4.6% { opacity: 0.7; fill: #218bff; }
+        4.7%, 6.6% { opacity: 0.85; fill: #1a7f37; }
+        7.8%, 94.2% { opacity: 1; fill: #1a7f37; filter: none; }
+        94.3%, 100%   { opacity: 0.4; fill: #0969da; }
+      }
+
+      @keyframes decrypt_c3 {
+        0%, 2.8% { opacity: 0.5; fill: #0969da; }
+        2.9%, 5.7% { opacity: 0.7; fill: #218bff; }
+        5.8%, 8.1% { opacity: 0.85; fill: #1a7f37; }
+        9.7%, 94.2% { opacity: 1; fill: #1a7f37; filter: none; }
+        94.3%, 100%   { opacity: 0.4; fill: #0969da; }
+      }
+
+      @keyframes decrypt_c4 {
+        0%, 3.3% { opacity: 0.5; fill: #0969da; }
+        3.4%, 6.8% { opacity: 0.7; fill: #218bff; }
+        6.9%, 9.7% { opacity: 0.85; fill: #1a7f37; }
+        11.5%, 94.2% { opacity: 1; fill: #1a7f37; filter: none; }
+        94.3%, 100%   { opacity: 0.4; fill: #0969da; }
+      }
+
+      @keyframes decrypt_c6 {
+        0%, 4.5% { opacity: 0.5; fill: #0969da; }
+        4.6%, 9.0% { opacity: 0.7; fill: #218bff; }
+        9.1%, 12.8% { opacity: 0.85; fill: #1a7f37; }
+        15.2%, 94.2% { opacity: 1; fill: #1a7f37; filter: none; }
+        94.3%, 100%   { opacity: 0.4; fill: #0969da; }
+      }
+
+      @keyframes decrypt_c7 {
+        0%, 5.0% { opacity: 0.5; fill: #0969da; }
+        5.1%, 10.1% { opacity: 0.7; fill: #218bff; }
+        10.2%, 14.3% { opacity: 0.85; fill: #1a7f37; }
+        17.0%, 94.2% { opacity: 1; fill: #1a7f37; filter: none; }
+        94.3%, 100%   { opacity: 0.4; fill: #0969da; }
+      }
+
+      @keyframes decrypt_c8 {
+        0%, 5.5% { opacity: 0.5; fill: #0969da; }
+        5.6%, 11.2% { opacity: 0.7; fill: #218bff; }
+        11.3%, 15.9% { opacity: 0.85; fill: #1a7f37; }
+        18.8%, 94.2% { opacity: 1; fill: #1a7f37; filter: none; }
+        94.3%, 100%   { opacity: 0.4; fill: #0969da; }
+      }
+
+      @keyframes decrypt_c9 {
+        0%, 6.1% { opacity: 0.5; fill: #0969da; }
+        6.2%, 12.3% { opacity: 0.7; fill: #218bff; }
+        12.4%, 17.5% { opacity: 0.85; fill: #1a7f37; }
+        20.7%, 94.2% { opacity: 1; fill: #1a7f37; filter: none; }
+        94.3%, 100%   { opacity: 0.4; fill: #0969da; }
+      }
+
+      @keyframes decrypt_c10 {
+        0%, 6.7% { opacity: 0.5; fill: #0969da; }
+        6.8%, 13.4% { opacity: 0.7; fill: #218bff; }
+        13.5%, 19.0% { opacity: 0.85; fill: #1a7f37; }
+        22.5%, 94.2% { opacity: 1; fill: #1a7f37; filter: none; }
+        94.3%, 100%   { opacity: 0.4; fill: #0969da; }
+      }
+
+      @keyframes decrypt_c11 {
+        0%, 7.2% { opacity: 0.5; fill: #0969da; }
+        7.3%, 14.5% { opacity: 0.7; fill: #218bff; }
+        14.6%, 20.6% { opacity: 0.85; fill: #1a7f37; }
+        24.3%, 94.2% { opacity: 1; fill: #1a7f37; filter: none; }
+        94.3%, 100%   { opacity: 0.4; fill: #0969da; }
+      }
+
+      @keyframes decrypt_c12 {
+        0%, 7.8% { opacity: 0.5; fill: #0969da; }
+        7.8%, 15.6% { opacity: 0.7; fill: #218bff; }
+        15.7%, 22.1% { opacity: 0.85; fill: #1a7f37; }
+        26.2%, 94.2% { opacity: 1; fill: #1a7f37; filter: none; }
+        94.3%, 100%   { opacity: 0.4; fill: #0969da; }
+      }
+      
+      .char-c0 { animation: decrypt_c0 12.0s infinite; }
+      .char-c1 { animation: decrypt_c1 12.0s infinite; }
+      .char-c2 { animation: decrypt_c2 12.0s infinite; }
+      .char-c3 { animation: decrypt_c3 12.0s infinite; }
+      .char-c4 { animation: decrypt_c4 12.0s infinite; }
+      .char-c6 { animation: decrypt_c6 12.0s infinite; }
+      .char-c7 { animation: decrypt_c7 12.0s infinite; }
+      .char-c8 { animation: decrypt_c8 12.0s infinite; }
+      .char-c9 { animation: decrypt_c9 12.0s infinite; }
+      .char-c10 { animation: decrypt_c10 12.0s infinite; }
+      .char-c11 { animation: decrypt_c11 12.0s infinite; }
+      .char-c12 { animation: decrypt_c12 12.0s infinite; }
+    </style>
+  </defs>
+
+  <!-- Clean Cyber Terminal Frame -->
+  <rect x="1" y="1" width="838" height="143" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.2" />
+  <line x1="80" y1="1" x2="760" y2="1" stroke="url(#cyber-border)" stroke-width="2" />
+  
+  <!-- Corner Reticles -->
+  <path d="M12 20 V12 H20" fill="none" stroke="#1a7f37" stroke-width="1.5" />
+  <path d="M828 20 V12 H820" fill="none" stroke="#0969da" stroke-width="1.5" />
+  <path d="M12 125 V133 H20" fill="none" stroke="#1a7f37" stroke-width="1.5" />
+  <path d="M828 125 V133 H820" fill="none" stroke="#0969da" stroke-width="1.5" />
+
+  <!-- Top Terminal CLI Status -->
+  <g transform="translate(32, 28)">
+    <text class="term-prompt">
+      <tspan class="term-green">root@sec-ops</tspan>:<tspan class="term-cyan">~#</tspan> 
+      <tspan class="term-cmd">./decrypt_identity.sh</tspan> 
+      --target <tspan fill="#e3b341">iamjaved026</tspan> 
+      <tspan fill="#57606a">[0x7F2A_CIPHER_RESOLVED]</tspan>
+    </text>
+  </g>
+
+  <!-- Middle Main Line: Hi, I'm JAVED HUSSAIN -->
+  <g transform="translate(32, 78)">
+    <text class="fixed-text" x="0" y="0">Hi, I'm</text>
+    
+    <text class="cipher-text" y="0">
+    <tspan class="char-c0" x="185">J</tspan>
+    <tspan class="char-c1" x="207">A</tspan>
+    <tspan class="char-c2" x="229">V</tspan>
+    <tspan class="char-c3" x="251">E</tspan>
+    <tspan class="char-c4" x="273">D</tspan>
+    <tspan class="char-c6" x="313">H</tspan>
+    <tspan class="char-c7" x="335">U</tspan>
+    <tspan class="char-c8" x="357">S</tspan>
+    <tspan class="char-c9" x="379">S</tspan>
+    <tspan class="char-c10" x="401">A</tspan>
+    <tspan class="char-c11" x="423">I</tspan>
+    <tspan class="char-c12" x="445">N</tspan>
+    </text>
+
+    <!-- Glowing Terminal Cursor -->
+    <rect x="473" y="-26" width="14" height="30" rx="2" class="cursor" />
+  </g>
+
+  <!-- Bottom Telemetry Badges -->
+  <g transform="translate(32, 120)" class="term-prompt">
+    <circle cx="4" cy="-4" r="3" fill="#1a7f37" />
+    <text x="14" y="0" fill="#1a7f37">SECURITY RESEARCHER</text>
+    
+    <text x="175" y="0" fill="#d0d7de">|</text>
+    <text x="190" y="0" fill="#218bff">68 REPOSITORIES VAULT</text>
+
+    <text x="365" y="0" fill="#d0d7de">|</text>
+    <text x="380" y="0" fill="#8250df">355 VERIFIED COMMITS</text>
+
+    <text x="555" y="0" fill="#d0d7de">|</text>
+    <text x="570" y="0" fill="#1a7f37">STATUS: COMPILED_ONLINE</text>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "_comment": "Featured projects for iamjaved026, displayed as cards. Stars, forks and languages are pulled from the API with descriptions formatted for maximum impact.",
+  "projects": [
+    {
+      "repo": "aero-chat-cli",
+      "description": "Lightweight, self-hostable terminal client for Aero messaging. Features Socket.IO realtime chat, auto JWT refresh, friends, multimedia & community docks."
+    },
+    {
+      "repo": "RTDB-Inspector",
+      "description": "A powerful Firebase Realtime Database (RTDB) security auditing and inspection tool. Analyze permissions, explore JSON data, and export database structures."
+    },
+    {
+      "repo": "trueface",
+      "description": "Real-Time AI Face Recognition System built with Next.js, FastAPI, FaceNet & WebAssembly. Detect, recognize & register faces instantly in your browser."
+    },
+    {
+      "repo": "kofitype-security-research",
+      "description": "Authorized audit of KofiType: 7+ anti-cheat bypasses, AES-GCM forge, Chrome extension, Puppeteer tests, fetch interception & client-side security lessons."
+    }
+  ]
+}

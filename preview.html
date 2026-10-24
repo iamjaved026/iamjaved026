@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GitHub Profile v2 · @iamjaved026 Live Preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --muted: #8b949e;
+      --accent: #39d353;
+      --blue: #58a6ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #161b22;
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      backdrop-filter: blur(10px);
+    }
+    .top-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      font-family: ui-monospace, monospace;
+    }
+    .badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      background: rgba(57, 211, 83, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(57, 211, 83, 0.3);
+    }
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+    }
+    .btn {
+      background: #21262d;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .btn:hover {
+      background: #30363d;
+      border-color: #8b949e;
+    }
+    .btn.active {
+      background: #238636;
+      border-color: #2ea043;
+      color: #fff;
+    }
+    .main-wrapper {
+      max-width: 1020px;
+      margin: 28px auto 80px;
+      padding: 0 16px;
+    }
+    /* GitHub README Box simulation */
+    .github-box {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #0d1117;
+      overflow: hidden;
+    }
+    .github-header {
+      background: #161b22;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 12px;
+      font-family: ui-monospace, monospace;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .markdown-body {
+      background: transparent !important;
+      color: var(--text) !important;
+      padding: 36px 32px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .markdown-body a { color: var(--blue) !important; text-decoration: none; }
+    .markdown-body a:hover { text-decoration: underline; }
+    .markdown-body hr { border-color: var(--border) !important; margin: 32px 0 !important; }
+    .markdown-body pre { background: #161b22 !important; border: 1px solid var(--border); border-radius: 6px; }
+    .markdown-body table { border-collapse: collapse; border-color: var(--border) !important; }
+    .markdown-body table th, .markdown-body table td { border-color: var(--border) !important; }
+    .markdown-body img { max-width: 100%; border-radius: 6px; }
+
+    /* Diagnostic gallery view */
+    .gallery-view { display: none; }
+    .row { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; margin-bottom: 24px; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px; flex: 1 1 440px; }
+    .card.light { background: #ffffff; border-color: #d0d7de; color: #1f2328; }
+    .tag { font: 11px ui-monospace, monospace; color: var(--muted); display: block; margin-bottom: 10px; }
+    .card.light .tag { color: #57606a; }
+    .grid-2x2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-title">
+    <span>iamjaved026 / README.md</span>
+    <span class="badge">V2.0 · 68 REPOS VERIFIED</span>
+  </div>
+  <div class="nav-tabs">
+    <button class="btn active" id="tab-github" onclick="showTab('github')">
+      🌐 1:1 GitHub Profile Simulation
+    </button>
+    <button class="btn" id="tab-gallery" onclick="showTab('gallery')">
+      🎨 Asset Diagnostics &amp; Dark/Light Lab
+    </button>
+    <button class="btn" id="replay-btn" onclick="replayAnimation()">
+      ↺ Replay Animations
+    </button>
+  </div>
+</div>
+
+<div class="main-wrapper">
+
+  <!-- ================================================================= -->
+  <!-- TAB 1: 1:1 GITHUB PROFILE PREVIEW                                 -->
+  <!-- ================================================================= -->
+  <div id="view-github" class="github-box">
+    <div class="github-header">
+      <span>iamjaved026 / README.md · main</span>
+      <span>Rendered via Profile v2 Engine</span>
+    </div>
+
+    <div class="markdown-body">
+      
+      <!-- HERO -->
+      <div align="center">
+        <!-- HACKER CIPHER DECRYPTION HEADER -->
+        <picture>
+          <source media="(prefers-color-scheme: dark)"  srcset="assets/header-cipher-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="assets/header-cipher-light.svg">
+          <img src="assets/header-cipher-dark.svg" width="100%" alt="Hi, I'm Javed Hussain - Decrypting Identity" style="margin-bottom: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.5);">
+        </picture>
+
+        <!-- TYPING BANNER -->
+        <a href="https://github.com/iamjaved026" target="_blank">
+          <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2500&pause=900&color=39D353&center=true&vCenter=true&width=620&lines=Javed+Hussain;Cyber+Security+%26+Offensive+Research;Real-Time+Systems+%26+Terminal+Clients;AI%2C+IoT+%26+Hardware+Hacking;01100010+01110010+01100101+01100001+01101011" alt="typing banner">
+        </a>
+        <br><br>
+
+        <!-- SOCIALS -->
+        <p>
+          <a href="https://iamjaved.site" target="_blank"><img src="https://img.shields.io/badge/Portfolio-00C853?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"></a>
+          <a href="https://github.com/iamjaved026" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+          <a href="mailto:jvdhussain2008@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+          <a href="https://github.com/iamjaved026?tab=repositories" target="_blank"><img src="https://img.shields.io/badge/Status-Compiling_Chaos-39D353?style=for-the-badge&logo=terminal&logoColor=black" alt="Status"></a>
+        </p>
+
+        <br>
+        <img src="https://komarev.com/ghpvc/?username=iamjaved026&style=flat-square&color=39d353&label=terminal+accesses" alt="profile views">
+      </div>
+
+      <hr>
+
+      <!-- WHOAMI -->
+      <h2><code>~/</code> whoami</h2>
+      <pre><code>$ cat javed.json | jq .</code></pre>
+      <pre><code style="color: #58a6ff;">{
+  <span style="color: #7ee787;">"name"</span>: <span style="color: #a5d6ff;">"Javed Hussain"</span>,
+  <span style="color: #7ee787;">"handle"</span>: <span style="color: #a5d6ff;">"iamjaved026"</span>,
+  <span style="color: #7ee787;">"location"</span>: <span style="color: #a5d6ff;">"Bihar, India"</span>,
+  <span style="color: #7ee787;">"role"</span>: <span style="color: #a5d6ff;">"Security Researcher · Full-Stack Systems Engineer · IoT &amp; AI Builder"</span>,
+  <span style="color: #7ee787;">"motto"</span>: <span style="color: #a5d6ff;">"Breaking systems to understand them • Building tools to secure them"</span>,
+  <span style="color: #7ee787;">"current_explorations"</span>: [
+    <span style="color: #a5d6ff;">"Offensive Web &amp; Database Pentesting (RTDB-Inspector, KofiType audit)"</span>,
+    <span style="color: #a5d6ff;">"Real-time encrypted terminal communication (aero-chat-cli)"</span>,
+    <span style="color: #a5d6ff;">"Client-side Biometric Computer Vision via WebAssembly (trueface)"</span>,
+    <span style="color: #a5d6ff;">"Hardware bus probing &amp; reverse engineering (ESP32 &amp; Jio STB UART)"</span>
+  ]
+}</code></pre>
+
+      <ul>
+        <li>🔐 <strong>Offensive Security &amp; Pentesting</strong>: Passionate about vulnerability research, client-side cryptographic forge analysis, auth bypasses, and database auditing.</li>
+        <li>⚡ <strong>Real-Time &amp; Low-Latency Systems</strong>: Crafting CLI tools, WebSockets, and terminal protocols designed for privacy and speed.</li>
+        <li>🤖 <strong>Embedded IoT &amp; Hardware Research</strong>: Exploring ESP32 microcontrollers, UART bus inspection, home automation, and perimeter laser security.</li>
+        <li>👁️ <strong>Biometric AI &amp; Machine Learning</strong>: Building instant browser-based face recognition pipelines powered by FastAPI, FaceNet, and WebAssembly.</li>
+      </ul>
+
+      <hr>
+
+      <!-- TOOLBOX -->
+      <div align="center">
+        <h2><code>~/</code> toolbox</h2>
+        <p>
+          <img src="https://skillicons.dev/icons?i=ts,js,python,cpp,bash,c&perline=12" alt="Languages" /><br>
+          <img src="https://skillicons.dev/icons?i=linux,kali,git,github,vscode,regex&perline=12" alt="OS & Tools" /><br>
+          <img src="https://skillicons.dev/icons?i=nextjs,react,nodejs,fastapi,tailwind,html,css&perline=12" alt="Frameworks" /><br>
+          <img src="https://skillicons.dev/icons?i=firebase,mongodb,postman,tensorflow,arduino,raspberrypi&perline=12" alt="Cloud, DB & Hardware" />
+        </p>
+        <p style="margin-top: 10px;">
+          <img src="https://img.shields.io/badge/Burp_Suite-FF6633?style=flat-square&logo=burp-suite&logoColor=white"/>
+          <img src="https://img.shields.io/badge/Wireshark-1679A7?style=flat-square&logo=wireshark&logoColor=white"/>
+          <img src="https://img.shields.io/badge/Metasploit-000000?style=flat-square&logo=metasploit&logoColor=white"/>
+          <img src="https://img.shields.io/badge/ESP32-E7352C?style=flat-square"/>
+          <img src="https://img.shields.io/badge/Socket.IO-010101?style=flat-square&logo=socket.io"/>
+          <img src="https://img.shields.io/badge/WebAssembly-654FF0?style=flat-square&logo=webassembly&logoColor=white"/>
+          <img src="https://img.shields.io/badge/FaceNet-FF6F00?style=flat-square"/>
+        </p>
+      </div>
+
+      <hr>
+
+      <!-- SKILL RADAR -->
+      <div align="center">
+        <h2><code>~/</code> skill radar</h2>
+        <table style="width: 100%;">
+          <tr>
+            <td width="50%" align="center" valign="middle">
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
+                <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
+                <img src="assets/radar-dark.svg" width="420" alt="Skill Radar Chart">
+              </picture>
+            </td>
+            <td width="50%" align="center" valign="middle">
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="assets/radar-langs-dark.svg">
+                <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
+                <img src="assets/radar-langs-dark.svg" width="420" alt="Language Radar Chart">
+              </picture>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <hr>
+
+      <!-- CONTRIBUTION CALENDAR -->
+      <div align="center">
+        <h2><code>~/</code> contribution calendar</h2>
+        <img src="assets/metrics.isocalendar.svg" width="90%" alt="3D isometric contribution calendar">
+        <br><br>
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="assets/snake.svg">
+          <img src="assets/snake-dark.svg" width="100%" alt="Snake eating contribution graph">
+        </picture>
+      </div>
+
+      <hr>
+
+      <!-- THE NUMBERS -->
+      <div align="center">
+        <h2><code>~/</code> the numbers</h2>
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="assets/card-stats-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg">
+          <img src="assets/card-stats-dark.svg" width="500" alt="GitHub telemetry statistics">
+        </picture>
+        <br><br>
+        <img src="assets/metrics.languages.svg" height="175" alt="Language Breakdown">
+        <br><br>
+        <img src="assets/metrics.achievements.svg" width="90%" alt="GitHub Achievements">
+      </div>
+
+      <hr>
+
+      <!-- SELECTED WORK -->
+      <div align="center">
+        <h2><code>~/</code> selected work</h2>
+        <table style="width: 100%;">
+          <tr>
+            <td width="50%" align="center">
+              <a href="https://github.com/iamjaved026/aero-chat-cli" target="_blank">
+                <img src="assets/card-aero-chat-cli-dark.svg" width="430" alt="aero-chat-cli">
+              </a>
+            </td>
+            <td width="50%" align="center">
+              <a href="https://github.com/iamjaved026/RTDB-Inspector" target="_blank">
+                <img src="assets/card-RTDB-Inspector-dark.svg" width="430" alt="RTDB-Inspector">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td width="50%" align="center">
+              <a href="https://github.com/iamjaved026/trueface" target="_blank">
+                <img src="assets/card-trueface-dark.svg" width="430" alt="trueface">
+              </a>
+            </td>
+            <td width="50%" align="center">
+              <a href="https://github.com/iamjaved026/kofitype-security-research" target="_blank">
+                <img src="assets/card-kofitype-security-research-dark.svg" width="430" alt="kofitype-security-research">
+              </a>
+            </td>
+          </tr>
+        </table>
+
+        <br>
+        <table style="width: 100%; text-align: left; font-size: 13px;">
+          <thead>
+            <tr>
+              <th>project</th>
+              <th>focus</th>
+              <th>stack</th>
+              <th>repository</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong><a href="https://github.com/iamjaved026/aero-chat-cli" target="_blank">aero-chat-cli</a></strong></td>
+              <td>Real-time CLI Messaging Client</td>
+              <td><code>TypeScript</code> <code>Socket.IO</code> <code>JWT</code></td>
+              <td><a href="https://github.com/iamjaved026/aero-chat-cli" target="_blank">iamjaved026/aero-chat-cli</a></td>
+            </tr>
+            <tr>
+              <td><strong><a href="https://github.com/iamjaved026/RTDB-Inspector" target="_blank">RTDB-Inspector</a></strong></td>
+              <td>Firebase Database Pentesting Suite</td>
+              <td><code>TypeScript</code> <code>Firebase</code> <code>Audit</code></td>
+              <td><a href="https://github.com/iamjaved026/RTDB-Inspector" target="_blank">iamjaved026/RTDB-Inspector</a></td>
+            </tr>
+            <tr>
+              <td><strong><a href="https://github.com/iamjaved026/trueface" target="_blank">trueface</a></strong></td>
+              <td>In-Browser AI Face Recognition</td>
+              <td><code>FastAPI</code> <code>FaceNet</code> <code>WebAssembly</code></td>
+              <td><a href="https://github.com/iamjaved026/trueface" target="_blank">iamjaved026/trueface</a></td>
+            </tr>
+            <tr>
+              <td><strong><a href="https://github.com/iamjaved026/kofitype-security-research" target="_blank">kofitype-security-research</a></strong></td>
+              <td>Anti-Cheat Bypass &amp; AES-GCM Forge</td>
+              <td><code>JavaScript</code> <code>Cryptography</code> <code>Puppeteer</code></td>
+              <td><a href="https://github.com/iamjaved026/kofitype-security-research" target="_blank">iamjaved026/kofitype-security-research</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr>
+
+      <!-- TELEMETRY TERMINAL -->
+      <h2><code>~/</code> telemetry terminal</h2>
+      <pre><code>&gt; systemctl status javed.service
+● javed.service - Javed Hussain (0xJAVED) Autonomous Agent
+     Loaded: loaded (/etc/systemd/system/javed.service; enabled)
+     Active: active (running) since Tue 2026-03-12 10:56:44 UTC
+   Main PID: 1337 (hacker_brain)
+     Memory: 64.0G (expanding knowledge graph)
+        CPU: 100% (reverse engineering reality)
+      Tasks: [
+        [✔] Offensive Security &amp; Threat Modeling
+        [✔] Real-Time WebSocket Protocols
+        [✔] Hardware Serial / UART Bus Probing
+        [✔] Biometric Neural Network Inference
+        [✔] Autonomous Open-Source Engineering
+      ]
+
+Status: "Zero-days hunted. Daemons spawned. Code deployed." ⚡</code></pre>
+
+      <hr>
+
+      <!-- TERMINAL UPLINK -->
+      <div align="center">
+        <h3><code>~/</code> terminal uplink</h3>
+        <p>
+          <a href="https://iamjaved.site" target="_blank">
+            <img src="https://img.shields.io/badge/WEBSITE-iamjaved.site-39D353?style=for-the-badge&logo=firefox-browser&logoColor=black" alt="Website">
+          </a>
+          &nbsp;
+          <a href="mailto:jvdhussain2008@gmail.com">
+            <img src="https://img.shields.io/badge/DISPATCH-jvdhussain2008%40gmail.com-EA4335?style=for-the-badge&logo=mail.ru&logoColor=white" alt="Email">
+          </a>
+          &nbsp;
+          <a href="https://github.com/iamjaved026" target="_blank">
+            <img src="https://img.shields.io/badge/TARGET-github.com%2Fiamjaved026-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+          </a>
+        </p>
+        <br>
+        <sub><code>01110011 01100101 01100011 01110101 01110010 01101001 01110100 01111001 00100000 01100010 01111001 00100000 01100100 01100101 01110011 01101001 01100111 01101110</code></sub>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- TAB 2: ASSET LAB & DIAGNOSTICS                                    -->
+  <!-- ================================================================= -->
+  <div id="view-gallery" class="gallery-view">
+    
+    <div style="margin-bottom: 24px;">
+      <h3 style="color: var(--accent); margin-bottom: 6px;">Asset Diagnostics &amp; Dark/Light Mode Lab</h3>
+      <p style="color: var(--muted); font-size: 13px;">Compare each SVG across dark and light palettes to inspect rendering fidelity before pushing to GitHub.</p>
+    </div>
+
+    <!-- PORTRAIT SECTION -->
+    <div class="row">
+      <div class="card" style="text-align: center;">
+        <span class="tag">assets/portrait.svg · Primary Color Halftone with Scanline Reveal</span>
+        <img class="portrait-img" src="assets/portrait.svg" width="300" style="margin: 0 auto;" alt="Color Portrait">
+      </div>
+      <div class="card" style="text-align: center;">
+        <span class="tag">assets/portrait-mono-dark.svg · Matrix Green Monochrome</span>
+        <img class="portrait-img" src="assets/portrait-mono-dark.svg" width="300" style="margin: 0 auto;" alt="Mono Portrait">
+      </div>
+    </div>
+
+    <!-- RADAR SECTION -->
+    <div class="row">
+      <div class="card">
+        <span class="tag">assets/radar-dark.svg · Skill Radar (Dark Mode)</span>
+        <img src="assets/radar-dark.svg" width="440" alt="Skill Radar Dark">
+      </div>
+      <div class="card light">
+        <span class="tag">assets/radar-light.svg · Skill Radar (Light Mode)</span>
+        <img src="assets/radar-light.svg" width="440" alt="Skill Radar Light">
+      </div>
+    </div>
+
+    <!-- STAT CARD SECTION -->
+    <div class="row">
+      <div class="card">
+        <span class="tag">assets/card-stats-dark.svg · 6-Tile Telemetry (Dark Mode)</span>
+        <img src="assets/card-stats-dark.svg" width="500" alt="Card Stats Dark">
+      </div>
+    <!-- SNAKE GAME SECTION -->
+    <div class="row">
+      <div class="card">
+        <span class="tag">assets/snake-dark.svg · Contribution Snake Game (Arcade Dark)</span>
+        <img src="assets/snake-dark.svg" width="100%" alt="Snake Game Dark">
+      </div>
+      <div class="card light">
+        <span class="tag">assets/snake.svg · Contribution Snake Game (Arcade Light)</span>
+        <img src="assets/snake.svg" width="100%" alt="Snake Game Light">
+      </div>
+    </div>
+
+    <!-- PROJECT CARDS -->
+    <div class="grid-2x2">
+      <div class="card">
+        <span class="tag">aero-chat-cli</span>
+        <img src="assets/card-aero-chat-cli-dark.svg" width="430" alt="aero-chat-cli">
+      </div>
+      <div class="card">
+        <span class="tag">RTDB-Inspector</span>
+        <img src="assets/card-RTDB-Inspector-dark.svg" width="430" alt="RTDB-Inspector">
+      </div>
+      <div class="card">
+        <span class="tag">trueface</span>
+        <img src="assets/card-trueface-dark.svg" width="430" alt="trueface">
+      </div>
+      <div class="card">
+        <span class="tag">kofitype-security-research</span>
+        <img src="assets/card-kofitype-security-research-dark.svg" width="430" alt="kofitype-security-research">
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  function showTab(tab) {
+    const vGithub = document.getElementById('view-github');
+    const vGallery = document.getElementById('view-gallery');
+    const btnGithub = document.getElementById('tab-github');
+    const btnGallery = document.getElementById('tab-gallery');
+
+    if (tab === 'github') {
+      vGithub.style.display = 'block';
+      vGallery.style.display = 'none';
+      btnGithub.classList.add('active');
+      btnGallery.classList.remove('active');
+    } else {
+      vGithub.style.display = 'none';
+      vGallery.style.display = 'block';
+      btnGithub.classList.remove('active');
+      btnGallery.classList.add('active');
+    }
+  }
+
+  function replayAnimation() {
+    document.querySelectorAll('img[src*=".svg"]').forEach(img => {
+      const base = img.src.split('?')[0];
+      img.src = base + '?' + Date.now();
+    });
+  }
+</script>
+
+</body>
+</html>

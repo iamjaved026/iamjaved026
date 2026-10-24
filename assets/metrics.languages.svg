@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="175" viewBox="0 0 480 175">
+    <style>
+        svg { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    </style>
+    <rect width="100%" height="100%" fill="#0d1117" rx="10" stroke="#30363d"/>
+    <g transform="translate(20, 20)">
+        <text x="0" y="0" font-size="13" font-weight="700" fill="#58a6ff">iamjaved026 · Verified Codebase Volume (8 Languages)</text>
+        
+        <!-- Progress bar -->
+        <g transform="translate(0, 14)">
+            <clipPath id="bar-clip">
+                <rect width="440" height="9" rx="4.5"/>
+            </clipPath>
+            <g clip-path="url(#bar-clip)">
+                <rect x="0.0" y="0" width="231.1" height="9" fill="#3178c6"/><rect x="231.1" y="0" width="59.4" height="9" fill="#f1e05a"/><rect x="290.5" y="0" width="42.6" height="9" fill="#e34c26"/><rect x="333.1" y="0" width="42.0" height="9" fill="#00B4AB"/><rect x="375.1" y="0" width="24.2" height="9" fill="#A97BFF"/><rect x="399.3" y="0" width="20.7" height="9" fill="#b07219"/><rect x="420.0" y="0" width="17.3" height="9" fill="#563d7c"/><rect x="437.3" y="0" width="2.7" height="9" fill="#3572A5"/>
+            </g>
+        </g>
+
+        <!-- Language list items -->
+        <g transform="translate(0, 42)">
+            
+    <g transform="translate(0, 0)">
+        <circle cx="5" cy="5" r="4.5" fill="#3178c6"/>
+        <text x="16" y="9" font-size="12" font-weight="600" fill="#c9d1d9">TypeScript</text>
+        <text x="180" y="9" font-size="11" text-anchor="end" fill="#8b949e">9.60 MB (52.5%)</text>
+    </g>
+    
+    <g transform="translate(0, 20)">
+        <circle cx="5" cy="5" r="4.5" fill="#f1e05a"/>
+        <text x="16" y="9" font-size="12" font-weight="600" fill="#c9d1d9">JavaScript</text>
+        <text x="180" y="9" font-size="11" text-anchor="end" fill="#8b949e">2.47 MB (13.5%)</text>
+    </g>
+    
+    <g transform="translate(0, 40)">
+        <circle cx="5" cy="5" r="4.5" fill="#e34c26"/>
+        <text x="16" y="9" font-size="12" font-weight="600" fill="#c9d1d9">HTML</text>
+        <text x="180" y="9" font-size="11" text-anchor="end" fill="#8b949e">1.77 MB (9.7%)</text>
+    </g>
+    
+    <g transform="translate(0, 60)">
+        <circle cx="5" cy="5" r="4.5" fill="#00B4AB"/>
+        <text x="16" y="9" font-size="12" font-weight="600" fill="#c9d1d9">Dart</text>
+        <text x="180" y="9" font-size="11" text-anchor="end" fill="#8b949e">1.75 MB (9.6%)</text>
+    </g>
+    
+    <g transform="translate(240, 0)">
+        <circle cx="5" cy="5" r="4.5" fill="#A97BFF"/>
+        <text x="16" y="9" font-size="12" font-weight="600" fill="#c9d1d9">Kotlin</text>
+        <text x="180" y="9" font-size="11" text-anchor="end" fill="#8b949e">1.01 MB (5.5%)</text>
+    </g>
+    
+    <g transform="translate(240, 20)">
+        <circle cx="5" cy="5" r="4.5" fill="#b07219"/>
+        <text x="16" y="9" font-size="12" font-weight="600" fill="#c9d1d9">Java</text>
+        <text x="180" y="9" font-size="11" text-anchor="end" fill="#8b949e">878.7 KB (4.7%)</text>
+    </g>
+    
+    <g transform="translate(240, 40)">
+        <circle cx="5" cy="5" r="4.5" fill="#563d7c"/>
+        <text x="16" y="9" font-size="12" font-weight="600" fill="#c9d1d9">CSS</text>
+        <text x="180" y="9" font-size="11" text-anchor="end" fill="#8b949e">734.6 KB (3.9%)</text>
+    </g>
+    
+    <g transform="translate(240, 60)">
+        <circle cx="5" cy="5" r="4.5" fill="#3572A5"/>
+        <text x="16" y="9" font-size="12" font-weight="600" fill="#c9d1d9">Python</text>
+        <text x="180" y="9" font-size="11" text-anchor="end" fill="#8b949e">116.6 KB (0.6%)</text>
+    </g>
+    
+        </g>
+    </g>
+</svg>

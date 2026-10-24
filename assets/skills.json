@@ -1,0 +1,12 @@
+{
+  "title": "Technical Skill Matrix",
+  "_comment": "Javed Hussain (iamjaved026) Skill Spectrum across Security, Systems & Engineering. Values 0-100.",
+  "axes": [
+    { "label": "Offensive Security", "value": 92 },
+    { "label": "TypeScript & Full Stack", "value": 90 },
+    { "label": "Real-Time & Sockets", "value": 88 },
+    { "label": "IoT & Hardware Hacking", "value": 85 },
+    { "label": "AI & Computer Vision", "value": 82 },
+    { "label": "Reverse Eng & Crypto", "value": 89 }
+  ]
+}
